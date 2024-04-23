@@ -2,7 +2,6 @@ package com.zwigato.service.user.entity;
 
 import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDate;
@@ -11,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users", schema = "zwigato")
 public class User {
 
     @Id
@@ -33,7 +32,7 @@ public class User {
     private String contactNumber;
 
     @Column(name = "is_active")
-    private boolean isActive;
+    private Boolean isActive;
 
     @Column(name = "user_password")
     private String userPassword;
@@ -57,7 +56,7 @@ public class User {
     }
 
     public User(Long userId, String firstName, String lastName, String emailAddress, String contactNumber,
-                boolean isActive, String userPassword, LocalDate dateOfBirth, List<Roles> roles) {
+                 Boolean isActive, String userPassword, LocalDate dateOfBirth, List<Roles> roles) {
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -109,11 +108,11 @@ public class User {
         this.contactNumber = contactNumber;
     }
 
-    public boolean isActive() {
+    public Boolean isActive() {
         return isActive;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(Boolean active) {
         isActive = active;
     }
 
