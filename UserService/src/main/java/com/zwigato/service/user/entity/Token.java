@@ -3,8 +3,8 @@ package com.zwigato.service.user.entity;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "token", schema = "zwigato")
+//@Entity
+//@Table(name = "token", schema = "identity")
 public class Token {
 
     @Id
@@ -26,7 +26,7 @@ public class Token {
     private LocalDateTime validateAt;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "userId", nullable = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false)
     private User user;
 
     public Token(){
