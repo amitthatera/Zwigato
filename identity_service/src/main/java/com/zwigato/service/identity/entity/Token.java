@@ -1,10 +1,10 @@
-package com.zwigato.service.user.entity;
+package com.zwigato.service.identity.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-//@Entity
-//@Table(name = "token", schema = "identity")
+@Entity
+@Table(name = "token", schema = "identity")
 public class Token {
 
     @Id

@@ -1,4 +1,4 @@
-package com.zwigato.service.user.dto;
+package com.zwigato.service.identity.dto;
 
 import java.time.LocalDateTime;
 

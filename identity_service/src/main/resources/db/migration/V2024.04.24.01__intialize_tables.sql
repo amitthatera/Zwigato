@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS identity.users (
     last_name VARCHAR(255),
     email_address VARCHAR(255) UNIQUE,
     contact_number VARCHAR(255) UNIQUE,
-    is_active BOOLEAN,
+    is_active BOOLEAN DEFAULT true,
     user_password VARCHAR(255),
     date_of_birth DATE,
     created_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
