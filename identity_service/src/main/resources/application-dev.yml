@@ -14,10 +14,4 @@ spring:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
-flyway:
-  locations: classpath:db/migration
-  encoding: UTF-8
-  url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/zwigato
-  user: ${DB_USERNAME:postgres}
-  password: ${DB_PASSWORD:postgres}
-  baselineOnMigrate: true
+

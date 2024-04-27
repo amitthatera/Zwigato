@@ -9,4 +9,3 @@ spring:
    multipart:
      max-file-size: 50MB
 
-
